@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>KaamConnect Dashboard</title>
+
+<link
+  rel="stylesheet"
+  href="style.css"
+>
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <div class="logo">
+    Kaam<span>Connect</span>
+  </div>
+
+  <button onclick="logout()">
+    Logout
+  </button>
+
+</header>
+
+
+<main class="dashboard">
+
+  <h1 id="welcome">
+    Welcome
+  </h1>
+
+
+  <section id="customerPanel">
+
+    <h2>
+      Find Workers
+    </h2>
+
+    <input
+      id="service"
+      placeholder="Service e.g. Electrician"
+    >
+
+    <input
+      id="location"
+      placeholder="Location"
+    >
+
+    <button onclick="findWorkers()">
+      Search
+    </button>
+
+    <div id="workers"></div>
+
+  </section>
+
+
+  <section id="workerPanel">
+
+    <h2>
+      Create Worker Profile
+    </h2>
+
+    <input
+      id="workerService"
+      placeholder="Service"
+    >
+
+    <input
+      id="experience"
+      type="number"
+      placeholder="Experience Years"
+    >
+
+    <input
+      id="workerPrice"
+      type="number"
+      placeholder="Starting Price ₹"
+    >
+
+    <input
+      id="workerLocation"
+      placeholder="Location"
+    >
+
+    <textarea
+      id="description"
+      placeholder="About your service"
+    ></textarea>
+
+    <button onclick="createWorker()">
+      Create Profile
+    </button>
+
+    <p id="workerMessage"></p>
+
+  </section>
+
+
+  <section>
+
+    <h2>
+      My Bookings
+    </h2>
+
+    <button onclick="getBookings()">
+      Refresh Bookings
+    </button>
+
+    <div id="bookings"></div>
+
+  </section>
+
+</main>
+
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

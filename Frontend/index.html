@@ -1,0 +1,240 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KaamConnect - Local Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Kaam<span>Connect</span></div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#workers">Workers</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <button class="login-btn" onclick="openLogin()">Login</button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="small-title">YOUR LOCAL SERVICE PARTNER</p>
+
+      <h1>Find Trusted Workers<br>
+        <span>Near You</span>
+      </h1>
+
+      <p>
+        Book trusted professionals for cleaning, cooking,
+        electrical work, plumbing, laundry and more.
+      </p>
+
+      <div class="search-box">
+        <input id="locationInput" type="text" placeholder="📍 Enter your location">
+        <input id="serviceInput" type="text" placeholder="🔍 What service do you need?">
+        <button onclick="searchService()">Search</button>
+      </div>
+
+      <div id="searchResult"></div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="section-title">
+      <p>WHAT WE OFFER</p>
+      <h2>Popular Services</h2>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service-card" onclick="selectService('Home Cleaning')">
+        <div class="icon">🧹</div>
+        <h3>Home Cleaning</h3>
+        <p>Professional cleaning</p>
+        <button>Book Now</button>
+      </div>
+
+      <div class="service-card" onclick="selectService('Cooking')">
+        <div class="icon">👨‍🍳</div>
+        <h3>Cook</h3>
+        <p>Experienced home cooks</p>
+        <button>Book Now</button>
+      </div>
+
+      <div class="service-card" onclick="selectService('Electrician')">
+        <div class="icon">⚡</div>
+        <h3>Electrician</h3>
+        <p>Electrical repair service</p>
+        <button>Book Now</button>
+      </div>
+
+      <div class="service-card" onclick="selectService('Plumber')">
+        <div class="icon">🔧</div>
+        <h3>Plumber</h3>
+        <p>Fast plumbing service</p>
+        <button>Book Now</button>
+      </div>
+
+      <div class="service-card" onclick="selectService('Laundry')">
+        <div class="icon">👕</div>
+        <h3>Laundry</h3>
+        <p>Wash & iron service</p>
+        <button>Book Now</button>
+      </div>
+
+      <div class="service-card" onclick="selectService('Part Time Worker')">
+        <div class="icon">👷</div>
+        <h3>Part-Time Worker</h3>
+        <p>Flexible workers</p>
+        <button>Book Now</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="how">
+    <div class="section-title">
+      <p>SIMPLE PROCESS</p>
+      <h2>How KaamConnect Works</h2>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div>1</div>
+        <h3>Choose Service</h3>
+        <p>Select the service you need.</p>
+      </div>
+
+      <div class="step">
+        <div>2</div>
+        <h3>Find Worker</h3>
+        <p>Check worker profiles and ratings.</p>
+      </div>
+
+      <div class="step">
+        <div>3</div>
+        <h3>Negotiate Price</h3>
+        <p>Customer and worker can agree on a price.</p>
+      </div>
+
+      <div class="step">
+        <div>4</div>
+        <h3>Book</h3>
+        <p>Confirm your booking.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Workers -->
+  <section class="workers" id="workers">
+    <div class="section-title">
+      <p>TOP PROFESSIONALS</p>
+      <h2>Popular Workers</h2>
+    </div>
+
+    <div class="worker-grid">
+
+      <div class="worker-card">
+        <div class="worker-photo">👨</div>
+        <h3>Rahul Kumar</h3>
+        <p>⚡ Electrician</p>
+        <p class="rating">⭐ 4.8 (124 reviews)</p>
+        <button onclick="selectService('Electrician')">Book Worker</button>
+      </div>
+
+      <div class="worker-card">
+        <div class="worker-photo">👩</div>
+        <h3>Priya Sharma</h3>
+        <p>👨‍🍳 Cook</p>
+        <p class="rating">⭐ 4.9 (98 reviews)</p>
+        <button onclick="selectService('Cooking')">Book Worker</button>
+      </div>
+
+      <div class="worker-card">
+        <div class="worker-photo">👨</div>
+        <h3>Amit Singh</h3>
+        <p>🔧 Plumber</p>
+        <p class="rating">⭐ 4.7 (76 reviews)</p>
+        <button onclick="selectService('Plumber')">Book Worker</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div>
+      <p>ABOUT KAAMCONNECT</p>
+      <h2>One App For Every Household Need</h2>
+      <p>
+        KaamConnect connects customers with trusted local workers.
+        Find professionals, discuss prices and book services easily
+        from one platform.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h2>KaamConnect</h2>
+    <p>Connecting People With Professionals.</p>
+    <p>© 2026 KaamConnect. All rights reserved.</p>
+  </footer>
+
+  <!-- Booking Modal -->
+  <div class="modal" id="bookingModal">
+    <div class="modal-box">
+      <span class="close" onclick="closeModal()">×</span>
+
+      <h2>Book Service</h2>
+
+      <p id="selectedService"></p>
+
+      <input id="name" type="text" placeholder="Your Name">
+      <input id="phone" type="tel" placeholder="Mobile Number">
+      <input id="date" type="date">
+      <input id="price" type="number" placeholder="Your Price (₹)">
+
+      <button class="confirm-btn" onclick="confirmBooking()">
+        Confirm Booking
+      </button>
+
+      <p id="bookingMessage"></p>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-box">
+      <span class="close" onclick="closeLogin()">×</span>
+
+      <h2>Login</h2>
+
+      <input type="tel" placeholder="Mobile Number">
+      <input type="password" placeholder="Password">
+
+      <button class="confirm-btn" onclick="loginUser()">
+        Login
+      </button>
+
+      <p id="loginMessage"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>KaamConnect Register</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+  <div class="auth-box">
+
+    <h1>
+      Kaam<span>Connect</span>
+    </h1>
+
+    <h2>
+      Create Account
+    </h2>
+
+    <input
+      id="name"
+      type="text"
+      placeholder="Full Name"
+    >
+
+    <input
+      id="phone"
+      type="tel"
+      placeholder="Mobile Number"
+    >
+
+    <input
+      id="password"
+      type="password"
+      placeholder="Password"
+    >
+
+    <input
+      id="location"
+      type="text"
+      placeholder="City / Location"
+    >
+
+    <select id="role">
+
+      <option value="customer">
+        I need a worker
+      </option>
+
+      <option value="worker">
+        I want to work
+      </option>
+
+    </select>
+
+    <button onclick="register()">
+      Create Account
+    </button>
+
+    <p id="message"></p>
+
+    <p>
+      Already have an account?
+      <a href="login.html">
+        Login
+      </a>
+    </p>
+
+  </div>
+
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>
