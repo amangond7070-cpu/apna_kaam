@@ -9,10 +9,10 @@ const authRoutes =
   require("./routes/auth");
 
 const workerRoutes =
-  require("./routes/workers");
+  require("./routes/worker");
 
 const bookingRoutes =
-  require("./routes/bookings");
+  require("./routes/booking");
 
 
 const app =
@@ -30,12 +30,12 @@ app.use(
 );
 
 app.use(
-  "/api/workers",
+  "/api/worker",
   workerRoutes
 );
 
 app.use(
-  "/api/bookings",
+  "/api/booking",
   bookingRoutes
 );
 

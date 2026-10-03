@@ -2,7 +2,7 @@ const express =
   require("express");
 
 const Worker =
-  require("../models/Worker");
+  require("../models/worker");
 
 const auth =
   require("../middleware/auth");
@@ -142,7 +142,7 @@ router.get(
       }
 
 
-      const workers =
+      const worker =
         await Worker
 
           .find(filter)
@@ -156,9 +156,9 @@ router.get(
       res.json({
 
         count:
-          workers.length,
+          worker.length,
 
-        workers
+        worker
 
       });
 
