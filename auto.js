@@ -1,5 +1,5 @@
 const API =
-  "http://localhost:5000/api";
+  "https://apna-kaam.onrender.com";
 
 
 async function register() {
