@@ -58,6 +58,6 @@ const workerSchema =
 
 module.exports =
   mongoose.model(
-    "Worker",
+    "worker",
     workerSchema
   );

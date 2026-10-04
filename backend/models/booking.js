@@ -18,7 +18,7 @@ const bookingSchema =
       type:
         mongoose.Schema.Types.ObjectId,
 
-      ref: "Worker",
+      ref: "worker",
 
       required: true
     },
