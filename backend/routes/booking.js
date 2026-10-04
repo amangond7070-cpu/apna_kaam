@@ -2,10 +2,10 @@ const express =
   require("express");
 
 const Booking =
-  require("../models/Booking");
+  require("../models/booking");
 
 const Worker =
-  require("../models/Worker");
+  require("../models/worker");
 
 const auth =
   require("../middleware/auth");
